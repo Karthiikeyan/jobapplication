@@ -2,7 +2,7 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import Nav from "@/components/Elements/Nav";
 import Footer from "@/components/Elements/Footer";
-import ScrolltoTop from "@/components/Elements/ScrollToTop";
+import ScrolltoTop from "../components/Elements/ScrolltoTop";
 
 const font = Poppins({
   weight: ["200", "300", "400", "500", "600", "700", "800"],
