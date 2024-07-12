@@ -14,7 +14,7 @@ export default function Layout({children}){
   const closeNavHandler = () => setShowNav(false);
     return (
       <>
-        <div className="flex bg-[#f3f6f4]">
+        <div className="flex relative bg-[#f3f6f4]">
           <ToastContainer theme="dark" />
           {showNav ? (
             <SideBar closeNav={closeNavHandler} showNav={showNav} />

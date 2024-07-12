@@ -1,7 +1,7 @@
 'use client'
 import Image from 'next/image';
 import Link from 'next/link';
-import logo from "@/public/images/logo.svg";
+import admin from "@/public/images/admin.jpeg";
 import React from 'react'
 
 const Nav = () => {
@@ -20,13 +20,15 @@ const Nav = () => {
         </Link>
       </div>
       <div className="md:hidden">
-        <Image
-          src={logo}
-          className="w-8 h-8 rounded-full"
-          height={30}
-          width={30}
-          alt="logo"
-        />
+        <Link href="/admin">
+          <Image
+            src={admin}
+            className="w-8 h-8 rounded-full"
+            height={30}
+            width={30}
+            alt="logo"
+          />
+        </Link>
       </div>
     </div>
   );

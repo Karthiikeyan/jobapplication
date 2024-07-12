@@ -7,8 +7,8 @@ import { AiFillCloseCircle } from "react-icons/ai";
 const SideBar = ({closeNav, showNav}) => {
   const navOpenStyle = showNav ? "translate-x-0" : "translate-x-[-100%]";
   return (
-    <div className="relative flex flex-col bg-slate-100">
-      <div className={`${navOpenStyle} w-25 sm:w-80 h-[100vh] py-6 border border-black relative`}>
+    <div className="flex flex-col bg-slate-100">
+      <div className={`${navOpenStyle} md:w-25 w-40 h-[100vh] py-6 border border-black relative`}>
         <div className={`${navOpenStyle} flex flex-col justify-center absolute items-center sm:w-[80%]`}>
           <Link
             href="/admin/create"
