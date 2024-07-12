@@ -25,35 +25,40 @@ const CreatePage = () => {
 
   const onSubmitHandler = async (e) => {
     e.preventDefault();
-    const formData = new FormData();
-    formData.append("title", data.title);
-    formData.append("description", data.description);
-    formData.append("salary", data.salary);
-    formData.append("location", data.location);
-    formData.append("jobtype", data.jobtype);
-    formData.append("category", data.category);
-    formData.append("company", data.company);
-    formData.append("companydescription", data.companydescription);
-    formData.append("image", image);
-    formData.append("link", data.link);
+    
+    try {
+      const formData = new FormData();
+      formData.append("title", data.title);
+      formData.append("description", data.description);
+      formData.append("salary", data.salary);
+      formData.append("location", data.location);
+      formData.append("jobtype", data.jobtype);
+      formData.append("category", data.category);
+      formData.append("company", data.company);
+      formData.append("companydescription", data.companydescription);
+      formData.append("image", image);
+      formData.append("link", data.link);
 
-    const response = await axios.post("/api/job", formData);
-    if (response.data.success) {
-      toast.success("Job added");
-      setImage(false);
-      setData({
-        title: "",
-        description: "",
-        salary: "",
-        location: "",
-        jobtype: "",
-        category: "",
-        company: "",
-        companydescription: "",
-        link: ""
-      });
-    } else {
-      toast.error("Something went wrong!");
+      const response = await axios.post("/api/job", formData);
+      if (response.data.success) {
+        toast.success("Job added");
+        setImage(false);
+        setData({
+          title: "",
+          description: "",
+          salary: "",
+          location: "",
+          jobtype: "",
+          category: "",
+          company: "",
+          companydescription: "",
+          link: "",
+        });
+      } else {
+        toast.error("Something went wrong!");
+      }
+    } catch (error) {
+      console.log(error);
     }
   };
 
