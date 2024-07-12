@@ -14,12 +14,13 @@ const CreatePage = () => {
     category: "",
     company: "",
     companydescription: "",
+    link: "",
   });
 
   const onChangeHandler = (e) => {
     const name = e.target.name;
     const value = e.target.value;
-    setData((data) => ({ ...data, [name]: value.toLowerCase() }));
+    setData((data) => ({ ...data, [name]: value}));
   };
 
   const onSubmitHandler = async (e) => {
@@ -34,6 +35,7 @@ const CreatePage = () => {
     formData.append("company", data.company);
     formData.append("companydescription", data.companydescription);
     formData.append("image", image);
+    formData.append("link", data.link);
 
     const response = await axios.post("/api/job", formData);
     if (response.data.success) {
@@ -48,6 +50,7 @@ const CreatePage = () => {
         category: "",
         company: "",
         companydescription: "",
+        link: ""
       });
     } else {
       toast.error("Something went wrong!");
@@ -191,7 +194,7 @@ const CreatePage = () => {
             Category
           </label>
           <select
-            name="jobtype"
+            name="category"
             className="w-full px-3 py-2 border border-2 rounded-lg outline-none "
             required
             onChange={onChangeHandler}
@@ -207,6 +210,21 @@ const CreatePage = () => {
             <option value="marketing">Marketing</option>
             <option value="aiengineering">Artificial Intelligence</option>
           </select>
+        </div>
+
+        <div>
+          <label htmlFor="link" className="block text-gray-700">
+            Job Link
+          </label>
+          <input
+            placeholder="Enter link"
+            type="text"
+            name="link"
+            className="w-full px-3 py-2 border border-2 rounded-lg outline-none "
+            required
+            onChange={onChangeHandler}
+            value={data.link}
+          />
         </div>
 
         <div className="flex justify-center m-6 md:col-span-2">

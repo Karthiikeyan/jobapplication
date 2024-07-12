@@ -44,6 +44,7 @@ export async function POST(request) {
       company: `${formData.get("company")}`,
       companydescription: `${formData.get("companydescription")}`,
       image: `${imgUrl}`,
+      link: `${formData.get("link")}`,
     };
 
     await JobModel.create(jobData);
