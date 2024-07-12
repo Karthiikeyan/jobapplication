@@ -2,9 +2,8 @@
 import Image from "next/image";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import logo from '@/public/images/icon1.png'
+import profile from '@/public/images/profile.jpg';
 import SideBar from "@/components/Elements/SideBar";
-import { GiHamburgerMenu } from "react-icons/gi";
 import { useState } from "react";
 import Link from "next/link";
 
@@ -20,12 +19,7 @@ export default function Layout({children}){
             <SideBar closeNav={closeNavHandler} showNav={showNav} />
           ) : (
             <></>
-            // <div
-            //   onClick={showNavHandler}
-            //   className="flex justify-center w-12 h-12 px-2 py-2 font-bold text-black border border-black cursor-pointer item-center"
-            // >
-            //   <GiHamburgerMenu className="text-xl font-bold" />
-            // </div>
+            
           )}
 
           <div className="flex flex-col w-full">
@@ -38,7 +32,7 @@ export default function Layout({children}){
 
               <Image
                 onClick={showNavHandler}
-                src={logo}
+                src={profile}
                 alt=""
                 width={12}
                 height={12}
