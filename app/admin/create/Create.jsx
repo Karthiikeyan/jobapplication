@@ -20,7 +20,7 @@ const CreatePage = () => {
   const onChangeHandler = (e) => {
     const name = e.target.name;
     const value = e.target.value;
-    setData((data) => ({ ...data, [name]: value}));
+    setData((data) => ({ ...data, [name]: value.toLowerCase()}));
   };
 
   const onSubmitHandler = async (e) => {
@@ -80,7 +80,7 @@ const CreatePage = () => {
             type="text"
             id="title"
             name="title"
-            className="w-full px-3 py-2 border border-2 rounded-lg outline-none "
+            className="w-full px-3 py-2 border-2 rounded-lg outline-none "
             required
             onChange={onChangeHandler}
             value={data.title}
@@ -95,7 +95,7 @@ const CreatePage = () => {
             placeholder="Enter company"
             type="text"
             name="company"
-            className="w-full px-3 py-2 border border-2 rounded-lg outline-none "
+            className="w-full px-3 py-2 border-2 rounded-lg outline-none "
             required
             onChange={onChangeHandler}
             value={data.company}
@@ -110,7 +110,7 @@ const CreatePage = () => {
             placeholder="Enter Job description"
             name="description"
             rows="4"
-            className="w-full px-3 py-2 border border-2 rounded-lg outline-none "
+            className="w-full px-3 py-2 border-2 rounded-lg outline-none "
             required
             onChange={onChangeHandler}
             value={data.description}
@@ -125,7 +125,7 @@ const CreatePage = () => {
             placeholder="Enter company description"
             name="companydescription"
             rows="4"
-            className="w-full px-3 py-2 border border-2 rounded-lg outline-none "
+            className="w-full px-3 py-2 border-2 rounded-lg outline-none "
             required
             onChange={onChangeHandler}
             value={data.companydescription}
@@ -141,7 +141,7 @@ const CreatePage = () => {
             placeholder="Upload images"
             type="file"
             name="image"
-            className="w-full px-3 py-2 border border-2 rounded-lg outline-none "
+            className="w-full px-3 py-2 border-2 rounded-lg outline-none "
             required
           />
         </div>
@@ -154,7 +154,7 @@ const CreatePage = () => {
             placeholder="Enter salary"
             type="text"
             name="salary"
-            className="w-full px-3 py-2 border border-2 rounded-lg outline-none "
+            className="w-full px-3 py-2 border-2 rounded-lg outline-none "
             required
             onChange={onChangeHandler}
             value={data.salary}
@@ -169,7 +169,7 @@ const CreatePage = () => {
             placeholder="Enter location"
             type="text"
             name="location"
-            className="w-full px-3 py-2 border border-2 rounded-lg outline-none "
+            className="w-full px-3 py-2 border-2 rounded-lg outline-none "
             required
             onChange={onChangeHandler}
             value={data.location}
@@ -182,7 +182,7 @@ const CreatePage = () => {
           </label>
           <select
             name="jobtype"
-            className="w-full px-3 py-2 border border-2 rounded-lg outline-none "
+            className="w-full px-3 py-2 border-2 rounded-lg outline-none "
             required
             onChange={onChangeHandler}
             value={data.jobtype}
@@ -200,7 +200,7 @@ const CreatePage = () => {
           </label>
           <select
             name="category"
-            className="w-full px-3 py-2 border border-2 rounded-lg outline-none "
+            className="w-full px-3 py-2 border-2 rounded-lg outline-none "
             required
             onChange={onChangeHandler}
             value={data.category}
@@ -225,7 +225,7 @@ const CreatePage = () => {
             placeholder="Enter link"
             type="text"
             name="link"
-            className="w-full px-3 py-2 border border-2 rounded-lg outline-none "
+            className="w-full px-3 py-2 border-2 rounded-lg outline-none "
             required
             onChange={onChangeHandler}
             value={data.link}
