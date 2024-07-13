@@ -20,7 +20,7 @@ const CreatePage = () => {
   const onChangeHandler = (e) => {
     const name = e.target.name;
     const value = e.target.value;
-    setData((data) => ({ ...data, [name]: value}));
+    setData((data) => ({ ...data, [name]: value.toLowerCase()}));
   };
 
   const onSubmitHandler = async (e) => {
