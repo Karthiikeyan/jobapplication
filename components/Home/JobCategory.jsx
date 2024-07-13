@@ -4,7 +4,6 @@ import axios from "axios";
 import Link from "next/link";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
-// import software from "@/public/images/category/software.jpeg";
 import {
   software,
   machinelearning,
@@ -15,20 +14,10 @@ import {
   datascience,
   aiengineer,
 } from "@/public/images/category/index";
-// import { software } from '@/public/images/category/index'
 
 
 const JobCategory = () => {
-    // const [jobsList, setJobsList] = useState([]);
-
-    // const fetchData = async () => {
-    //   const response = await axios.get("/api/job");
-    //   setJobsList(response.data.jobsList);
-    // };
-
-    // useEffect(() => {
-    //   fetchData();
-    // }, []);
+   
     
   return (
     <div>
@@ -37,8 +26,7 @@ const JobCategory = () => {
       </div>
 
       <div className="grid grid-cols-1 gap-8 px-10 mb-8 md:grid-cols-2 lg:grid-cols-3">
-        {/* {JobData.map((job) => {
-          return ( */}
+       
         <Link href="/jobcategory/software">
           <div className="relative flex items-center overflow-hidden transition duration-300 bg-teal-100 rounded-lg shadow-md cursor-pointer group hover:shadow-lg hover:scale-105">
             <div className="flex items-center justify-center sm:mr-4">
@@ -182,8 +170,7 @@ const JobCategory = () => {
             </div>
           </div>
         </Link>
-        {/* //   );
-        // })} */}
+       
       </div>
     </div>
   );

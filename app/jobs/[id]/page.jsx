@@ -90,14 +90,12 @@ const Page = ({params}) => {
                 <li>{data.companydescription}</li>
               </ul>
             </div>
-            {/* <Link href={data.link}> */}
             <button
               onClick={() => handleClick(data.link)}
               className="block px-4 py-2 mt-4 text-white bg-teal-500 rounded-md cursor-pointer md:hidden"
             >
               Apply Now
             </button>
-            {/* </Link> */}
           </div>
         </>
       ) : (

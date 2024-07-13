@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { FiBookmark } from "react-icons/fi";
 import axios from "axios";
+import Image from "next/image";
 
 const AllJobs = () => {
   const [jobsList, setJobsList] = useState([]);
@@ -27,10 +28,12 @@ const AllJobs = () => {
           return (
             <Link href={`/jobs/${job._id}`} key={job._id}>
               <div className="relative flex items-center p-4 overflow-hidden transition duration-300 ease-in-out transform bg-teal-100 rounded-lg cursor-pointer group hover:shadow-xl hover:scale-105">
-                <img
+                <Image
                   src={job.image}
                   alt="Card Image"
                   className="w-16 h-16 mr-4 rounded-full"
+                  width={30}
+                  height={30}
                 />
                 <div className="flex-1">
                   <h2 className="text-lg font-semibold">{job.title}</h2>

@@ -46,7 +46,6 @@ const JobCategoryPage = ({params}) => {
                       </span>
                     </div>
                   </div>
-                  {/* <FiBookmark className="absolute top-0 right-0 w-5 h-5 mt-2 mr-2" /> */}
                 </div>
               </Link>
             );
