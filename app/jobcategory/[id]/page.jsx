@@ -1,5 +1,6 @@
 'use client'
 import axios from 'axios';
+import Image from 'next/image';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react'
 import { FiBookmark } from 'react-icons/fi';
@@ -18,7 +19,7 @@ const JobCategoryPage = ({params}) => {
       }, []);
     
   return (
-    <div>
+    <div className='h-screen'>
       <div className="py-8 text-center">
         <h2 className="text-3xl font-bold text-teal-500">Featured {params.id} Jobs</h2>
       </div>
@@ -29,10 +30,12 @@ const JobCategoryPage = ({params}) => {
             return (
               <Link href={`/jobs/${job._id}`} key={job._id}>
                 <div className="relative flex items-center p-4 overflow-hidden transition duration-300 ease-in-out transform bg-teal-100 rounded-lg cursor-pointer group hover:shadow-xl hover:scale-105">
-                  <img
+                  <Image
                     src={job.image}
                     alt="Card Image"
                     className="w-16 h-16 mr-4 rounded-full"
+                    width={16}
+                    height={16}
                   />
                   <div className="flex-1">
                     <h2 className="text-lg font-semibold">{job.title}</h2>
